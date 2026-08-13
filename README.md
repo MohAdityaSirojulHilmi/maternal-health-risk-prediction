@@ -87,26 +87,25 @@ The confusion matrix is used to visualize the classification results for the thr
 
 ## Results
 
-The experimental evaluation was conducted using 10-fold cross-validation with different regularization parameters (C) and kernel functions.
+The experimental evaluation was conducted using 10-fold cross-validation to investigate the performance of the KELM model under different configurations.
 
-Four kernel functions were evaluated:
+The experiments evaluated:
 
-- Linear
-- Polynomial
-- RBF
-- Sigmoid
+- Regularization parameter (C): 0.1, 1, 10, and 100
+- Kernel functions: Linear, Polynomial, RBF, and Sigmoid
+- Outlier handling: with and without Isolation Forest
 
-The experiments were performed with and without Isolation Forest for outlier handling.
-
-The best classification performance was obtained using KELM with a Polynomial kernel, a regularization parameter of C = 0.1, and Isolation Forest for outlier handling.
-
-The model achieved an average accuracy of 92.09% using 10-fold cross-validation.
+The performance of each configuration was evaluated based on accuracy, sensitivity, and specificity.
 
 ### Best Result
 
-| Outlier Handling | Kernel | C | Accuracy |
-|---|---|---:|---:|
-| Isolation Forest | Polynomial | 0.1 | **92.09%** |
+Among the evaluated configurations, the best classification performance was obtained using Isolation Forest combined with KELM using a Polynomial kernel and a regularization parameter of C = 0.1.
+
+| Outlier Handling | Kernel | C | Cross-Validation | Accuracy |
+|---|---|---:|---:|---:|
+| Isolation Forest | Polynomial | 0.1 | 10-Fold | **92.09%** |
+
+The model achieved an average accuracy of **92.09%** using 10-fold cross-validation.
 
 ## Confusion Matrix
 
