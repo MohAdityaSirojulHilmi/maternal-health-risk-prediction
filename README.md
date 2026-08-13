@@ -61,7 +61,8 @@ The confusion matrix is used to visualize the classification results for the thr
 
 ## Dataset
 
-The project uses the Maternal Health Risk dataset containing clinical and demographic information related to maternal health risk classification.
+The Maternal Health Risk dataset is used for maternal health risk classification.
+**Dataset Source:** Kaggle
 
 ## Research Context
 
