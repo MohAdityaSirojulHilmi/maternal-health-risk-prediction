@@ -112,7 +112,7 @@ The model achieved an average accuracy of 92.09% using 10-fold cross-validation.
 
 The confusion matrix below presents the classification performance of the best-performing KELM configuration: Polynomial kernel with C = 0.1 and Isolation Forest.
 
-
+![Confusion Matrix](confusion_matrix_best.png)
 
 ## Tools and Technologies
 
