@@ -87,19 +87,9 @@ The confusion matrix is used to visualize the classification results for the thr
 
 ## Results
 
-The experimental evaluation was conducted using 10-fold cross-validation to investigate the performance of the KELM model under different configurations.
-
-The experiments evaluated:
-
-- Regularization parameter (C): 0.1, 1, 10, and 100
-- Kernel functions: Linear, Polynomial, RBF, and Sigmoid
-- Outlier handling: with and without Isolation Forest
-
-The performance of each configuration was evaluated based on accuracy, sensitivity, and specificity.
+The highest average accuracy was obtained using Isolation Forest combined with KELM using a Polynomial kernel and a regularization parameter of C = 0.1.
 
 ### Best Result
-
-Among the evaluated configurations, the best classification performance was obtained using Isolation Forest combined with KELM using a Polynomial kernel and a regularization parameter of C = 0.1.
 
 | Outlier Handling | Kernel | C | Cross-Validation | Accuracy |
 |---|---|---:|---:|---:|
@@ -125,6 +115,7 @@ The confusion matrix below presents the classification performance of the best-p
 ## Dataset
 
 The Maternal Health Risk dataset is used for maternal health risk classification.
+
 **Dataset Source:** Kaggle
 
 ## Research Context
