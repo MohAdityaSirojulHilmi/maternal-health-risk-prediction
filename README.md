@@ -25,6 +25,40 @@ The main workflow of this project consists of:
 7. Confusion matrix analysis
 8. Accuracy comparison
 
+## Experimental Setup
+
+The experimental evaluation was conducted to investigate the performance of Kernel Extreme Learning Machine (KELM) under different parameter and kernel configurations.
+
+The experiments consisted of the following stages:
+
+1. **10-Fold Cross-Validation**
+   
+   The dataset was evaluated using 10-fold cross-validation to assess the classification performance of the KELM model.
+
+2. **Regularization Parameter (C) Experiment**
+   
+   Several regularization parameter values were evaluated:
+   
+   - C = 0.1
+   - C = 1
+   - C = 10
+   - C = 100
+
+3. **Kernel Function Experiment**
+   
+   Four kernel functions were compared:
+   
+   - Linear
+   - Polynomial
+   - Radial Basis Function (RBF)
+   - Sigmoid
+
+4. **Outlier Handling Experiment**
+   
+   The experiments were conducted both with and without Isolation Forest to evaluate the effect of outlier handling on classification performance.
+
+The performance of each configuration was evaluated using accuracy, sensitivity, and specificity.
+
 ## Kernel Functions
 
 The KELM models evaluated in this project include:
@@ -45,10 +79,40 @@ The effect of outlier handling is evaluated by comparing model performance befor
 Model performance is evaluated using:
 
 - Accuracy
+- Sensitivity
+- Specificity
 - Confusion Matrix
-- Classification Performance
 
 The confusion matrix is used to visualize the classification results for the three maternal health risk categories.
+
+## Results
+
+The experimental evaluation was conducted using 10-fold cross-validation with different regularization parameters (C) and kernel functions.
+
+Four kernel functions were evaluated:
+
+- Linear
+- Polynomial
+- RBF
+- Sigmoid
+
+The experiments were performed with and without Isolation Forest for outlier handling.
+
+The best classification performance was obtained using KELM with a Polynomial kernel, a regularization parameter of C = 0.1, and Isolation Forest for outlier handling.
+
+The model achieved an average accuracy of 92.09% using 10-fold cross-validation.
+
+### Best Result
+
+| Outlier Handling | Kernel | C | Accuracy |
+|---|---|---:|---:|
+| Isolation Forest | Polynomial | 0.1 | **92.09%** |
+
+## Confusion Matrix
+
+The confusion matrix below presents the classification performance of the best-performing KELM configuration: Polynomial kernel with C = 0.1 and Isolation Forest.
+
+
 
 ## Tools and Technologies
 
